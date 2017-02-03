@@ -279,7 +279,7 @@ public class MainModel implements MainContract.ModelOps {
         //data base logic
         //closing pending connection database helper
         if (mDatabaseHelper != null) {
-            mDatabaseHelper.close();
+            mDatabaseHelper.close()
         }
     }
 }
@@ -592,6 +592,9 @@ public class MainActivity extends AppCompatActivity implements MainContract.Requ
     }
 }
 ```
+
+# Done
+DB jobs & List adapter are not covered but you can check it on Project code.
 
 
 
