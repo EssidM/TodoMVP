@@ -5,10 +5,11 @@ import android.content.Context;
 import com.leadit.todomvp.entities.Note;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 /**
  * Main Presenter
- *
+ * <p>
  * Man In The Middle between Model @ View
  *
  * @author Mohamed Essid on 02/02/2017.
@@ -78,13 +79,20 @@ public class MainPresenter implements MainContract.PresenterOps, MainContract.Re
     }
 
     @Override
+    public List<Note> getNotes() {
+        return mModel.getNotes();
+    }
+
+    @Override
     public void onNoteInserted(Note note) {
-        mView.get().showToast(String.format("Note %s was inserted", note.getId()));
+        mView.get().showToast("Note was inserted");
+        mView.get().updateList();
     }
 
     @Override
     public void onNoteRemoved(Note note) {
         mView.get().showToast(String.format("NoteTable %s removed", note.getId()));
+        mView.get().updateList();
     }
 
     @Override

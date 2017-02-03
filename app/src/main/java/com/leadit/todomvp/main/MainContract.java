@@ -2,7 +2,10 @@ package com.leadit.todomvp.main;
 
 import android.content.Context;
 
+import com.leadit.todomvp.database.tables.NoteTable;
 import com.leadit.todomvp.entities.Note;
+
+import java.util.List;
 
 /**
  * Main activity Contract
@@ -24,6 +27,8 @@ public interface MainContract {
         void showAlert(String msg);
 
         Context getContext();
+
+        void updateList();
     }
 
 
@@ -38,6 +43,8 @@ public interface MainContract {
         void newNote(String note);
 
         void deleteNote(Note note);
+
+        List<Note> getNotes();
     }
 
     /**
@@ -64,6 +71,9 @@ public interface MainContract {
 
         void removeNote(Note note);
 
+        List<Note> getNotes();
+
         void onDestroy();
+
     }
 }

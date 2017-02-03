@@ -12,11 +12,16 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName = "notes")
 public class NoteTable {
 
-    @DatabaseField(generatedId = true)
-    private String id;
-    @DatabaseField(canBeNull = false)
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_MESSAGE = "message";
+    public static final String COLUMN_DATE = "date";
+
+
+    @DatabaseField(columnName = COLUMN_ID, generatedId = true)
+    private Long id;
+    @DatabaseField(columnName = COLUMN_MESSAGE, canBeNull = false)
     private String message;
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(columnName = COLUMN_DATE, canBeNull = false)
     private long date;
 
     public NoteTable() {
@@ -27,17 +32,17 @@ public class NoteTable {
         this.date = date;
     }
 
-    public NoteTable(String id, String message, long date) {
+    public NoteTable(Long id, String message, long date) {
         this.id = id;
         this.message = message;
         this.date = date;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

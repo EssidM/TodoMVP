@@ -1,9 +1,9 @@
 # Android MVP - Notes Application Sample
-Android app with MVP architecture based on www.tinmegali.com MVP tutorial
+Android app with MVP architecture based on [tingimalli](www.tinmegali.com) MVP tutorial
 
 This application is sample of implementing MVP on Android without using any third library apart from the Android SDK, ORMlite for database (will not be covered cause it's out of scope).
 
-This is not <b>my personal tutorial</b> , I just re-implemented it in a way to learn how to implement MVP and to share it with all developers that are struggling with MVP.<br/>Based on http://www.tinmegali.com/en/model-view-presenter-mvp-in-android-part-2/ tutorial (you should check this link to have an idea about architecture and global concepts, you can follow this steps to implement a Note App ( a basic sample to add, remove notes).
+This is not <b>my personal tutorial</b> , I just re-implemented it in a way to learn how to implement MVP and to share it with all developers that are struggling with MVP.<br/>Based on this [tutorial](http://www.tinmegali.com/en/model-view-presenter-mvp-in-android-part-2/) (you should check this link to have an idea about architecture and global concepts, you can follow this steps to implement a Note App ( a basic sample to add, remove notes).
 
 If you like to learn by code, you can clone or download the project here.
 
@@ -283,7 +283,7 @@ public class MainModel implements MainContract.ModelOps {
         }
     }
 }
-``
+```
 
 # Step 5 SateMaintainer
 As said in the www.tinmegali.com tutorial, we got to consider some specifics related to

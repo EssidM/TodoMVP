@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TodoMVP</string>
+    <string name="add">add</string>
+    <string name="hint_new_note">Enter a new note</string>
+    <string name="alert_delete_title">Delete note</string>
+    <string name="alert_delete_msg">delete this note ?</string>
 </resources>
